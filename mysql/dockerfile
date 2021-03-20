@@ -1,0 +1,11 @@
+﻿FROM mysql:5.7
+
+LABEL  mantainer="Jounet" \
+			descripton="sql" \
+			version="1.0"
+
+# Add a database
+ENV MYSQL_DATABASE Inventary
+
+# Copy Scripts SQL to Docker
+COPY ./sqlscripts/ /docker-entrypoint-initdb.d/
