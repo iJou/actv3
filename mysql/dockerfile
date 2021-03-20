@@ -8,4 +8,4 @@ LABEL  mantainer="Jounet" \
 ENV MYSQL_DATABASE Inventary
 
 # Copy Scripts SQL to Docker
-COPY https://github.com/iJou/actv3.git/mysql/sqlscripts/ /docker-entrypoint-initdb.d/
+ADD https://github.com/iJou/actv3/mysql/sqlscripts/ /docker-entrypoint-initdb.d/
