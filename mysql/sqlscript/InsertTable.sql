@@ -1,8 +1,8 @@
 /* INSERT  MATERIAL */
 insert into material values ('LAP-D123','LAPTOP','Laptop DELL 123','Laptop 15');
-insert into material values ('LAP-A123','LAPTOP','Laptop ASUS ROG 5','Laptop ASUS ROG 15', 10);
-insert into material values ('LAP-D111','LAPTOP','Laptop DELL 111','Laptop 15', 15);
-insert into material values ('MOU-G555','MOUSE','Mouse Generic','Mouse Generic - Laser', 50);
+insert into material values ('LAP-A123','LAPTOP','Laptop ASUS ROG 5','Laptop ASUS ROG 15');
+insert into material values ('LAP-D111','LAPTOP','Laptop DELL 111','Laptop 15');
+insert into material values ('MOU-G555','MOUSE','Mouse Generic','Mouse Generic - Laser');
 
 /* INSERT STOCK */
 insert into stock values ('LAP-D123','CENTRO', 15);
