@@ -4,6 +4,14 @@ LABEL  mantainer="Jounet" \
 			descripton="sql" \
 			version="1.0"
 
+RUN mkdir /mysql-data
+
+WORKDIR /mysql-data
+
+RUN echo "Hello from Volume" > test
+
+VOLUME /mysql-data
+
 # Add a database
 ENV MYSQL_DATABASE Inventary
 
