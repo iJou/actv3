@@ -7,7 +7,7 @@ LABEL  mantainer="Jounet" \
 #VOLUME /mysql-data
 
 # Add a database
-ENV MYSQL_DATABASE Inventary
+ENV MYSQL_DATABASE Inventory
 
 # 
 RUN set -eux; \
@@ -15,5 +15,5 @@ RUN set -eux; \
 			  apt-get install -y git;
 
 # Copy Scripts SQL to Docker
-#RUN git clone https://github.com/iJou/actv3.git /myconfsql/
-#RUN cp -R /myconfsql/mysql/sqlscript/* /docker-entrypoint-initdb.d/
+RUN git clone https://github.com/iJou/actv3.git /myconfsql/
+RUN cp -R /myconfsql/mysql/sqlscript/* /docker-entrypoint-initdb.d/
