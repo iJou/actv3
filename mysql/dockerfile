@@ -14,4 +14,5 @@ RUN set -eux; \
 
 # Copy Scripts SQL to Docker
 # ADD https://github.com/moby/buildkit/blob/master/frontend/dockerfile/docs/experimental.md /docker-entrypoint-initdb.d/
-RUN git clone https://github.com/iJou/actv3.git /myapp/
+RUN git clone https://github.com/iJou/actv3.git /myconfsql/
+RUN cp -R /myconfsql/mysql/sqlscript/* /docker-entrypoint-initdb.d/
