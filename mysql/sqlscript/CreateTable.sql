@@ -6,7 +6,8 @@ descr varchar(50)
 );
 
 CREATE TABLE stock(
-idprod varchar(40) primary key not null, 
-store varchar(20) primary key not null, 
+idprod varchar(40) not null, 
+store varchar(20) not null, 
+PRIMARY KEY(idprod,store),
 qty int
 );
