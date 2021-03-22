@@ -5,7 +5,7 @@ LABEL  mantainer="Jounet" \
 			version="1.0"
 
 # Add a database
-ENV MYSQL_DATABASE=Inventary
+ENV MYSQL_DATABASE Inventary
 
 # 
 RUN set -eux; \
