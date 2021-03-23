@@ -1,0 +1,48 @@
+version: "3.2"
+services:
+  web:
+    build: 
+        context: https://github.com/iJou/actv3.git#:php 
+    image: harbor.tallerdevops.com/jazuaje/php:7.2-jou
+    container_name: myserphp
+    ports:
+      - "81:80"
+    environment:
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=jou1234
+      - MYSQL_DATABASE=Inventory
+      - MYSQL_HOST=sqlphp:3306
+    hostname: mystock
+    volumes:
+      - ~/Desktop/php/data:/var/www/html 
+    networks:
+      - myappnet
+    links:
+      - mysql
+    restart: on-failure
+    stdin_open: true
+    tty: true    
+        
+        
+  mysql:
+    build: 
+        context: https://github.com/iJou/actv3.git#:mysql
+    image: harbor.tallerdevops.com/jazuaje/mysql:5.7-jou
+    container_name: sqlphp
+    hostname: sqlphp
+    ports:
+      - "3306:3306"
+    restart: always
+    networks: 
+      - myappnet
+    environment:
+      - MYSQL_ROOT_PASSWORD=jou1234
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data: {}
+  
+networks:
+    myappnet:
+    
